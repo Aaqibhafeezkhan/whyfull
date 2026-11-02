@@ -41,6 +41,8 @@ def run(ctx):
             used.add(_image_id(ref))
         unused = {}
         for image in images:
+            if image.get("pinned"):
+                continue  # The runtime retains pinned images during garbage collection.
             image_id = image["id"]
             size = image["size"]
             if not isinstance(image_id, str) or not image_id:

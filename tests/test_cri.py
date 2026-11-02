@@ -53,3 +53,16 @@ def test_missing_tool_and_small_inventory_are_silent(root):
     assert list(cri.run(make_ctx(root.system()))) == []
     inventory(root, [{"id": "unused", "size": 1}], [])
     assert list(cri.run(make_ctx(root.system()))) == []
+
+
+def test_pinned_images_are_not_reported_as_reclaimable(root, monkeypatch):
+    monkeypatch.setattr(cri, "MIN_BYTES", 20000)
+    inventory(root, [{"id": "pinned", "size": 50000, "pinned": True}], [])
+    assert list(cri.run(make_ctx(root.system()))) == []
+
+
+def test_ambiguous_storage_devices_do_not_misattribute_image_bytes(root):
+    inventory(root, [{"id": "unused", "size": 500000000}], [])
+    root.mkdir("/var/lib/containers/storage")
+    root.mounts.append(("/var/lib/containers/storage", "ext4", "/dev/sdb1"))
+    assert list(cri.run(make_ctx(root.system()))) == []
