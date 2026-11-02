@@ -83,6 +83,10 @@ python3 -m pytest
 ruff check src tests tools
 ```
 
+## Writing a guide
+
+The website's guides live in `site/guides/` as Markdown, one file per problem. A good guide answers one question people search for, gives the commands to fix it by hand, and is honest about what's risky. Build the site locally with `pip install markdown && python3 site/build.py`.
+
 ## Reporting a bug
 
 Please include your distribution, the filesystem type (`df -T`), and the output of `sudo whyfull -v --format markdown`. Remove anything you don't want to share. If whyfull missed what was really filling your disk, say what it was: that's often the start of a new check.
