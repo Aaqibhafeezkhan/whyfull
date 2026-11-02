@@ -12,7 +12,7 @@ from whyfull.walk import allocated
 ROTATED_RE = re.compile(r"(\.(gz|xz|bz2|zst|zip|old)|\.\d+(\.(gz|xz|bz2|zst))?|-\d{8}(\.(gz|xz|bz2|zst))?)$")
 MIN_ROTATED = 200 * 10 ** 6
 BIG_ACTIVE = 1 * 10 ** 9
-SKIP_DIRS = {"journal"}  # handled by the journald check
+SKIP_DIRS = {"journal", "pods", "containers"}  # handled by dedicated checks; containers are pod-log symlinks
 
 
 def walk_logs(ctx, root="/var/log"):

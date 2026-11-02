@@ -20,6 +20,7 @@ MODULES = [
     "space",
     "journald",
     "logs",
+    "podlogs",
     "containers",
     "packages",
     "kernels",
