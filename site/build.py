@@ -248,7 +248,9 @@ def main():
     for g in guides:
         write("guides/%s/index.html" % g["slug"], build_guide(g, guides))
 
-    for name in ("style.css", "copy.js", "favicon.svg", "og.png"):
+    # IndexNow key (Bing, Yandex): lets the site announce new and changed pages.
+    keys = [n for n in os.listdir(HERE) if re.match(r"^[0-9a-f]{32}\.txt$", n)]
+    for name in ["style.css", "copy.js", "favicon.svg", "og.png"] + keys:
         src = os.path.join(HERE, name)
         if os.path.exists(src):
             shutil.copy(src, os.path.join(OUT, name))
