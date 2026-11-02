@@ -1,0 +1,433 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1167" height="1556" viewBox="0 0 1167 1556" role="img" aria-label="whyfull output explaining why a Linux disk is full">
+<rect width="100%" height="100%" rx="10" fill="#0d1117"/>
+<circle cx="22" cy="20" r="6" fill="#ff5f57"/><circle cx="42" cy="20" r="6" fill="#febc2e"/><circle cx="62" cy="20" r="6" fill="#28c840"/>
+<g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="13" fill="#c9d1d9">
+<text x="22.0" y="52" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">/</text>
+<text x="37.6" y="52" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">is</text>
+<text x="61.0" y="52" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">100%</text>
+<text x="100.0" y="52" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">full</text>
+<text x="139.0" y="52" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">·</text>
+<text x="154.6" y="52" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">4.0</text>
+<text x="185.8" y="52" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">GB</text>
+<text x="209.2" y="52" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">used</text>
+<text x="248.2" y="52" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">of</text>
+<text x="271.6" y="52" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">4.1</text>
+<text x="302.8" y="52" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">GB</text>
+<text x="326.2" y="52" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">·</text>
+<text x="341.8" y="52" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">0</text>
+<text x="357.4" y="52" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">B</text>
+<text x="373.0" y="52" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#ff7b72" font-weight="700" fill-opacity="1">free</text>
+<text x="419.8" y="52" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">(ext4</text>
+<text x="466.6" y="52" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">on</text>
+<text x="490.0" y="52" textLength="85.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/dev/loop0)</text>
+<text x="53.2" y="90" textLength="23.4" lengthAdjust="spacingAndGlyphs">700</text>
+<text x="84.4" y="90" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="90" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72">caution</text>
+<text x="185.8" y="90" textLength="7.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">1</text>
+<text x="201.4" y="90" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">deleted</text>
+<text x="263.8" y="90" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">file</text>
+<text x="302.8" y="90" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">still</text>
+<text x="349.6" y="90" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">open</text>
+<text x="388.6" y="90" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">by</text>
+<text x="412.0" y="90" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">nginx</text>
+<text x="185.8" y="109" textLength="195.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/log/nginx/access.log</text>
+<text x="388.6" y="109" textLength="70.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">(deleted)</text>
+<text x="185.8" y="128" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">#</text>
+<text x="201.4" y="128" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">restart</text>
+<text x="263.8" y="128" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">nginx,</text>
+<text x="318.4" y="128" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">or</text>
+<text x="341.8" y="128" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">free</text>
+<text x="380.8" y="128" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">the</text>
+<text x="412.0" y="128" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">space</text>
+<text x="458.8" y="128" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">without</text>
+<text x="521.2" y="128" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">a</text>
+<text x="536.8" y="128" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">restart:</text>
+<text x="185.8" y="147" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="147" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="147" textLength="62.4" lengthAdjust="spacingAndGlyphs">truncate</text>
+<text x="310.6" y="147" textLength="15.6" lengthAdjust="spacingAndGlyphs">-s</text>
+<text x="334.0" y="147" textLength="7.8" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="349.6" y="147" textLength="117.0" lengthAdjust="spacingAndGlyphs">/proc/1084/fd/3</text>
+<text x="53.2" y="185" textLength="23.4" lengthAdjust="spacingAndGlyphs">560</text>
+<text x="84.4" y="185" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="185" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72">caution</text>
+<text x="185.8" y="185" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">Docker</text>
+<text x="240.4" y="185" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">log</text>
+<text x="271.6" y="185" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">of</text>
+<text x="295.0" y="185" textLength="70.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">container</text>
+<text x="373.0" y="185" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">api</text>
+<text x="404.2" y="185" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">is</text>
+<text x="427.6" y="185" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">560</text>
+<text x="458.8" y="185" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">MB</text>
+<text x="185.8" y="204" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="204" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="204" textLength="62.4" lengthAdjust="spacingAndGlyphs">truncate</text>
+<text x="310.6" y="204" textLength="15.6" lengthAdjust="spacingAndGlyphs">-s</text>
+<text x="334.0" y="204" textLength="7.8" lengthAdjust="spacingAndGlyphs">0</text>
+<text x="349.6" y="204" textLength="70.2" lengthAdjust="spacingAndGlyphs">&#34;$(docker</text>
+<text x="427.6" y="204" textLength="54.6" lengthAdjust="spacingAndGlyphs">inspect</text>
+<text x="490.0" y="204" textLength="62.4" lengthAdjust="spacingAndGlyphs">--format</text>
+<text x="560.2" y="204" textLength="109.2" lengthAdjust="spacingAndGlyphs">&#39;{{.LogPath}}&#39;</text>
+<text x="677.2" y="204" textLength="39.0" lengthAdjust="spacingAndGlyphs">api)&#34;</text>
+<text x="185.8" y="223" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">#</text>
+<text x="201.4" y="223" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">rotate</text>
+<text x="256.0" y="223" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">future</text>
+<text x="310.6" y="223" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">logs</text>
+<text x="349.6" y="223" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">(applies</text>
+<text x="419.8" y="223" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">to</text>
+<text x="443.2" y="223" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">new</text>
+<text x="474.4" y="223" textLength="93.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">containers):</text>
+<text x="575.8" y="223" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">add</text>
+<text x="607.0" y="223" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">to</text>
+<text x="630.4" y="223" textLength="179.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/etc/docker/daemon.json</text>
+<text x="185.8" y="242" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">#</text>
+<text x="217.0" y="242" textLength="109.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">{&#34;log-driver&#34;:</text>
+<text x="334.0" y="242" textLength="93.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#34;json-file&#34;,</text>
+<text x="435.4" y="242" textLength="85.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#34;log-opts&#34;:</text>
+<text x="529.0" y="242" textLength="93.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">{&#34;max-size&#34;:</text>
+<text x="630.4" y="242" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#34;50m&#34;,</text>
+<text x="685.0" y="242" textLength="85.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#34;max-file&#34;:</text>
+<text x="778.6" y="242" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#34;3&#34;}}</text>
+<text x="53.2" y="280" textLength="23.4" lengthAdjust="spacingAndGlyphs">412</text>
+<text x="84.4" y="280" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="280" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="280" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">Docker</text>
+<text x="240.4" y="280" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">images</text>
+<text x="295.0" y="280" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">not</text>
+<text x="326.2" y="280" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">used</text>
+<text x="365.2" y="280" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">by</text>
+<text x="388.6" y="280" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">any</text>
+<text x="419.8" y="280" textLength="70.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">container</text>
+<text x="185.8" y="299" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">9</text>
+<text x="201.4" y="299" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">total,</text>
+<text x="256.0" y="299" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">3</text>
+<text x="271.6" y="299" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">in</text>
+<text x="295.0" y="299" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">use</text>
+<text x="185.8" y="318" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="318" textLength="46.8" lengthAdjust="spacingAndGlyphs">docker</text>
+<text x="256.0" y="318" textLength="39.0" lengthAdjust="spacingAndGlyphs">image</text>
+<text x="302.8" y="318" textLength="39.0" lengthAdjust="spacingAndGlyphs">prune</text>
+<text x="349.6" y="318" textLength="15.6" lengthAdjust="spacingAndGlyphs">-a</text>
+<text x="373.0" y="318" textLength="15.6" lengthAdjust="spacingAndGlyphs">-f</text>
+<text x="53.2" y="356" textLength="23.4" lengthAdjust="spacingAndGlyphs">390</text>
+<text x="84.4" y="356" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="356" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="356" textLength="7.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">3</text>
+<text x="201.4" y="356" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">old</text>
+<text x="232.6" y="356" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">kernels</text>
+<text x="185.8" y="375" textLength="124.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">6.8.0-31-generic</text>
+<text x="185.8" y="394" textLength="124.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">6.8.0-35-generic</text>
+<text x="185.8" y="413" textLength="124.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">6.8.0-40-generic</text>
+<text x="185.8" y="432" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="432" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="432" textLength="23.4" lengthAdjust="spacingAndGlyphs">apt</text>
+<text x="271.6" y="432" textLength="78.0" lengthAdjust="spacingAndGlyphs">autoremove</text>
+<text x="357.4" y="432" textLength="54.6" lengthAdjust="spacingAndGlyphs">--purge</text>
+<text x="185.8" y="451" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">#</text>
+<text x="201.4" y="451" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">if</text>
+<text x="224.8" y="451" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">old</text>
+<text x="256.0" y="451" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">kernels</text>
+<text x="318.4" y="451" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">remain,</text>
+<text x="380.8" y="451" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">purge</text>
+<text x="427.6" y="451" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">them</text>
+<text x="466.6" y="451" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">by</text>
+<text x="490.0" y="451" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">name,</text>
+<text x="536.8" y="451" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">e.g.:</text>
+<text x="583.6" y="451" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">sudo</text>
+<text x="622.6" y="451" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">apt</text>
+<text x="653.8" y="451" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">purge</text>
+<text x="700.6" y="451" textLength="218.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">linux-image-6.8.0-31-generic</text>
+<text x="53.2" y="489" textLength="23.4" lengthAdjust="spacingAndGlyphs">360</text>
+<text x="84.4" y="489" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="489" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="489" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">systemd</text>
+<text x="248.2" y="489" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">journal</text>
+<text x="310.6" y="489" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">in</text>
+<text x="334.0" y="489" textLength="124.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/var/log/journal</text>
+<text x="466.6" y="489" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">is</text>
+<text x="490.0" y="489" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">560</text>
+<text x="521.2" y="489" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">MB</text>
+<text x="185.8" y="508" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="508" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="508" textLength="78.0" lengthAdjust="spacingAndGlyphs">journalctl</text>
+<text x="326.2" y="508" textLength="140.4" lengthAdjust="spacingAndGlyphs">--vacuum-size=200M</text>
+<text x="185.8" y="527" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">#</text>
+<text x="201.4" y="527" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">keep</text>
+<text x="240.4" y="527" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">it</text>
+<text x="263.8" y="527" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">capped:</text>
+<text x="185.8" y="546" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="546" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="546" textLength="39.0" lengthAdjust="spacingAndGlyphs">mkdir</text>
+<text x="287.2" y="546" textLength="15.6" lengthAdjust="spacingAndGlyphs">-p</text>
+<text x="310.6" y="546" textLength="218.4" lengthAdjust="spacingAndGlyphs">/etc/systemd/journald.conf.d</text>
+<text x="185.8" y="565" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="565" textLength="46.8" lengthAdjust="spacingAndGlyphs">printf</text>
+<text x="256.0" y="565" textLength="249.6" lengthAdjust="spacingAndGlyphs">&#39;[Journal]\nSystemMaxUse=200M\n&#39;</text>
+<text x="513.4" y="565" textLength="7.8" lengthAdjust="spacingAndGlyphs">|</text>
+<text x="529.0" y="565" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="568.0" y="565" textLength="23.4" lengthAdjust="spacingAndGlyphs">tee</text>
+<text x="599.2" y="565" textLength="296.4" lengthAdjust="spacingAndGlyphs">/etc/systemd/journald.conf.d/size.conf</text>
+<text x="185.8" y="584" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="584" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="584" textLength="70.2" lengthAdjust="spacingAndGlyphs">systemctl</text>
+<text x="318.4" y="584" textLength="54.6" lengthAdjust="spacingAndGlyphs">restart</text>
+<text x="380.8" y="584" textLength="124.8" lengthAdjust="spacingAndGlyphs">systemd-journald</text>
+<text x="53.2" y="622" textLength="23.4" lengthAdjust="spacingAndGlyphs">280</text>
+<text x="84.4" y="622" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="622" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="622" textLength="7.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">7</text>
+<text x="201.4" y="622" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">rotated</text>
+<text x="263.8" y="622" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">or</text>
+<text x="287.2" y="622" textLength="78.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">compressed</text>
+<text x="373.0" y="622" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">log</text>
+<text x="404.2" y="622" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">files</text>
+<text x="451.0" y="622" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">in</text>
+<text x="474.4" y="622" textLength="62.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/var/log</text>
+<text x="185.8" y="641" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">40.0</text>
+<text x="224.8" y="641" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="256.0" y="641" textLength="156.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/log/syslog.4.gz</text>
+<text x="185.8" y="660" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">40.0</text>
+<text x="224.8" y="660" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="256.0" y="660" textLength="156.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/log/syslog.3.gz</text>
+<text x="185.8" y="679" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">40.0</text>
+<text x="224.8" y="679" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="256.0" y="679" textLength="156.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/log/syslog.2.gz</text>
+<text x="185.8" y="698" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">...</text>
+<text x="217.0" y="698" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">and</text>
+<text x="248.2" y="698" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">2</text>
+<text x="263.8" y="698" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">more</text>
+<text x="302.8" y="698" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">(-v</text>
+<text x="334.0" y="698" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">to</text>
+<text x="357.4" y="698" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">list)</text>
+<text x="185.8" y="717" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="717" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="717" textLength="31.2" lengthAdjust="spacingAndGlyphs">find</text>
+<text x="279.4" y="717" textLength="62.4" lengthAdjust="spacingAndGlyphs">/var/log</text>
+<text x="349.6" y="717" textLength="39.0" lengthAdjust="spacingAndGlyphs">-xdev</text>
+<text x="396.4" y="717" textLength="39.0" lengthAdjust="spacingAndGlyphs">-type</text>
+<text x="443.2" y="717" textLength="7.8" lengthAdjust="spacingAndGlyphs">f</text>
+<text x="458.8" y="717" textLength="78.0" lengthAdjust="spacingAndGlyphs">-regextype</text>
+<text x="544.6" y="717" textLength="109.2" lengthAdjust="spacingAndGlyphs">posix-extended</text>
+<text x="661.6" y="717" textLength="46.8" lengthAdjust="spacingAndGlyphs">-regex</text>
+<text x="716.2" y="717" textLength="366.6" lengthAdjust="spacingAndGlyphs">&#39;.*(\.(gz|xz|bz2|zst|old)|\.[0-9]+|-[0-9]{8})$&#39;</text>
+<text x="1090.6" y="717" textLength="54.6" lengthAdjust="spacingAndGlyphs">-delete</text>
+<text x="53.2" y="755" textLength="23.4" lengthAdjust="spacingAndGlyphs">240</text>
+<text x="84.4" y="755" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="755" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#7ee787">safe</text>
+<text x="185.8" y="755" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">apt</text>
+<text x="217.0" y="755" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">package</text>
+<text x="279.4" y="755" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">cache</text>
+<text x="326.2" y="755" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">in</text>
+<text x="349.6" y="755" textLength="179.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/var/cache/apt/archives</text>
+<text x="185.8" y="774" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="774" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="774" textLength="54.6" lengthAdjust="spacingAndGlyphs">apt-get</text>
+<text x="302.8" y="774" textLength="39.0" lengthAdjust="spacingAndGlyphs">clean</text>
+<text x="53.2" y="812" textLength="23.4" lengthAdjust="spacingAndGlyphs">238</text>
+<text x="84.4" y="812" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="812" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#7ee787">safe</text>
+<text x="185.8" y="812" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">Docker</text>
+<text x="240.4" y="812" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">build</text>
+<text x="287.2" y="812" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">cache</text>
+<text x="185.8" y="831" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">57</text>
+<text x="209.2" y="831" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">total,</text>
+<text x="263.8" y="831" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">0</text>
+<text x="279.4" y="831" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">in</text>
+<text x="302.8" y="831" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">use</text>
+<text x="185.8" y="850" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="850" textLength="46.8" lengthAdjust="spacingAndGlyphs">docker</text>
+<text x="256.0" y="850" textLength="54.6" lengthAdjust="spacingAndGlyphs">builder</text>
+<text x="318.4" y="850" textLength="39.0" lengthAdjust="spacingAndGlyphs">prune</text>
+<text x="365.2" y="850" textLength="15.6" lengthAdjust="spacingAndGlyphs">-f</text>
+<text x="53.2" y="888" textLength="23.4" lengthAdjust="spacingAndGlyphs">220</text>
+<text x="84.4" y="888" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="888" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#7ee787">safe</text>
+<text x="185.8" y="888" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">pip</text>
+<text x="217.0" y="888" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">cache</text>
+<text x="263.8" y="888" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">(alice)</text>
+<text x="185.8" y="907" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">220</text>
+<text x="217.0" y="907" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="248.2" y="907" textLength="171.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/home/alice/.cache/pip</text>
+<text x="185.8" y="926" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="926" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="926" textLength="15.6" lengthAdjust="spacingAndGlyphs">-u</text>
+<text x="263.8" y="926" textLength="39.0" lengthAdjust="spacingAndGlyphs">alice</text>
+<text x="310.6" y="926" textLength="15.6" lengthAdjust="spacingAndGlyphs">-H</text>
+<text x="334.0" y="926" textLength="15.6" lengthAdjust="spacingAndGlyphs">sh</text>
+<text x="357.4" y="926" textLength="15.6" lengthAdjust="spacingAndGlyphs">-c</text>
+<text x="380.8" y="926" textLength="31.2" lengthAdjust="spacingAndGlyphs">&#39;pip</text>
+<text x="419.8" y="926" textLength="39.0" lengthAdjust="spacingAndGlyphs">cache</text>
+<text x="466.6" y="926" textLength="46.8" lengthAdjust="spacingAndGlyphs">purge&#39;</text>
+<text x="53.2" y="964" textLength="23.4" lengthAdjust="spacingAndGlyphs">200</text>
+<text x="84.4" y="964" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="964" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="964" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">Files</text>
+<text x="232.6" y="964" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">in</text>
+<text x="256.0" y="964" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/tmp</text>
+<text x="295.0" y="964" textLength="70.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">untouched</text>
+<text x="373.0" y="964" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">for</text>
+<text x="404.2" y="964" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">7+</text>
+<text x="427.6" y="964" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">days</text>
+<text x="185.8" y="983" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">200</text>
+<text x="217.0" y="983" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="248.2" y="983" textLength="218.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/tmp/build-7731/artifact.tar</text>
+<text x="185.8" y="1002" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="1002" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="1002" textLength="31.2" lengthAdjust="spacingAndGlyphs">find</text>
+<text x="279.4" y="1002" textLength="31.2" lengthAdjust="spacingAndGlyphs">/tmp</text>
+<text x="318.4" y="1002" textLength="39.0" lengthAdjust="spacingAndGlyphs">-xdev</text>
+<text x="365.2" y="1002" textLength="39.0" lengthAdjust="spacingAndGlyphs">-type</text>
+<text x="412.0" y="1002" textLength="7.8" lengthAdjust="spacingAndGlyphs">f</text>
+<text x="427.6" y="1002" textLength="46.8" lengthAdjust="spacingAndGlyphs">-mtime</text>
+<text x="482.2" y="1002" textLength="15.6" lengthAdjust="spacingAndGlyphs">+7</text>
+<text x="505.6" y="1002" textLength="46.8" lengthAdjust="spacingAndGlyphs">-atime</text>
+<text x="560.2" y="1002" textLength="15.6" lengthAdjust="spacingAndGlyphs">+7</text>
+<text x="583.6" y="1002" textLength="54.6" lengthAdjust="spacingAndGlyphs">-delete</text>
+<text x="53.2" y="1040" textLength="23.4" lengthAdjust="spacingAndGlyphs">140</text>
+<text x="84.4" y="1040" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="115.6" y="1040" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="185.8" y="1040" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">crash</text>
+<text x="232.6" y="1040" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">reports</text>
+<text x="295.0" y="1040" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">in</text>
+<text x="318.4" y="1040" textLength="78.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/var/crash</text>
+<text x="185.8" y="1059" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">$</text>
+<text x="201.4" y="1059" textLength="31.2" lengthAdjust="spacingAndGlyphs">sudo</text>
+<text x="240.4" y="1059" textLength="31.2" lengthAdjust="spacingAndGlyphs">find</text>
+<text x="279.4" y="1059" textLength="78.0" lengthAdjust="spacingAndGlyphs">/var/crash</text>
+<text x="365.2" y="1059" textLength="39.0" lengthAdjust="spacingAndGlyphs">-type</text>
+<text x="412.0" y="1059" textLength="7.8" lengthAdjust="spacingAndGlyphs">f</text>
+<text x="427.6" y="1059" textLength="54.6" lengthAdjust="spacingAndGlyphs">-delete</text>
+<text x="115.6" y="1097" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#56d4dd">info</text>
+<text x="185.8" y="1097" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">143</text>
+<text x="217.0" y="1097" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">MB</text>
+<text x="240.4" y="1097" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">still</text>
+<text x="287.2" y="1097" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">free</text>
+<text x="326.2" y="1097" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">on</text>
+<text x="349.6" y="1097" textLength="7.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/</text>
+<text x="365.2" y="1097" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">is</text>
+<text x="388.6" y="1097" textLength="62.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">reserved</text>
+<text x="458.8" y="1097" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">for</text>
+<text x="490.0" y="1097" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">root</text>
+<text x="185.8" y="1116" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">ext</text>
+<text x="217.0" y="1116" textLength="85.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">filesystems</text>
+<text x="310.6" y="1116" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">keep</text>
+<text x="349.6" y="1116" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">about</text>
+<text x="396.4" y="1116" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">5%</text>
+<text x="419.8" y="1116" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">of</text>
+<text x="443.2" y="1116" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">their</text>
+<text x="490.0" y="1116" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">blocks</text>
+<text x="544.6" y="1116" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">for</text>
+<text x="575.8" y="1116" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">root,</text>
+<text x="622.6" y="1116" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">so</text>
+<text x="646.0" y="1116" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">services</text>
+<text x="716.2" y="1116" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">running</text>
+<text x="778.6" y="1116" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">as</text>
+<text x="185.8" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">other</text>
+<text x="232.6" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">users</text>
+<text x="279.4" y="1135" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">get</text>
+<text x="310.6" y="1135" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">&#39;No</text>
+<text x="341.8" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">space</text>
+<text x="388.6" y="1135" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">left</text>
+<text x="427.6" y="1135" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">on</text>
+<text x="451.0" y="1135" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">device&#39;</text>
+<text x="513.4" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">while</text>
+<text x="560.2" y="1135" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">143</text>
+<text x="591.4" y="1135" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">MB</text>
+<text x="614.8" y="1135" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">is</text>
+<text x="638.2" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">still</text>
+<text x="685.0" y="1135" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">free</text>
+<text x="724.0" y="1135" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">for</text>
+<text x="755.2" y="1135" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">root.</text>
+<text x="185.8" y="1154" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">Keep</text>
+<text x="224.8" y="1154" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">this</text>
+<text x="263.8" y="1154" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">reserve</text>
+<text x="326.2" y="1154" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">on</text>
+<text x="349.6" y="1154" textLength="7.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">a</text>
+<text x="365.2" y="1154" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">system</text>
+<text x="419.8" y="1154" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">disk:</text>
+<text x="466.6" y="1154" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">it</text>
+<text x="490.0" y="1154" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">lets</text>
+<text x="529.0" y="1154" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">root</text>
+<text x="568.0" y="1154" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">log</text>
+<text x="599.2" y="1154" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">in</text>
+<text x="622.6" y="1154" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">and</text>
+<text x="653.8" y="1154" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">clean</text>
+<text x="700.6" y="1154" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">up.</text>
+<text x="22.0" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">You</text>
+<text x="53.2" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">can</text>
+<text x="84.4" y="1192" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">free</text>
+<text x="123.4" y="1192" textLength="39.0" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">about</text>
+<text x="170.2" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">3.7</text>
+<text x="201.4" y="1192" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">GB</text>
+<text x="224.8" y="1192" textLength="31.2" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">(93%</text>
+<text x="263.8" y="1192" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">of</text>
+<text x="287.2" y="1192" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">what&#39;s</text>
+<text x="341.8" y="1192" textLength="46.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">used):</text>
+<text x="396.4" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill="#7ee787">698</text>
+<text x="427.6" y="1192" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#7ee787">MB</text>
+<text x="451.0" y="1192" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill="#7ee787">safe</text>
+<text x="490.0" y="1192" textLength="7.8" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="505.6" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill="#e3b341">1.8</text>
+<text x="536.8" y="1192" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#e3b341">GB</text>
+<text x="560.2" y="1192" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill="#e3b341">review</text>
+<text x="614.8" y="1192" textLength="7.8" lengthAdjust="spacingAndGlyphs">·</text>
+<text x="630.4" y="1192" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill="#ff7b72">1.3</text>
+<text x="661.6" y="1192" textLength="15.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72">GB</text>
+<text x="685.0" y="1192" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill="#ff7b72">caution</text>
+<text x="22.0" y="1230" textLength="54.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">Largest</text>
+<text x="84.4" y="1230" textLength="85.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">directories</text>
+<text x="178.0" y="1230" textLength="15.6" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">on</text>
+<text x="201.4" y="1230" textLength="7.8" lengthAdjust="spacingAndGlyphs" font-weight="700" fill-opacity="1" fill="#f0f6fc">/</text>
+<text x="61.0" y="1249" textLength="23.4" lengthAdjust="spacingAndGlyphs">2.1</text>
+<text x="92.2" y="1249" textLength="15.6" lengthAdjust="spacingAndGlyphs">GB</text>
+<text x="123.4" y="1249" textLength="31.2" lengthAdjust="spacingAndGlyphs">/var</text>
+<text x="61.0" y="1268" textLength="23.4" lengthAdjust="spacingAndGlyphs">890</text>
+<text x="92.2" y="1268" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1268" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/lib</text>
+<text x="61.0" y="1287" textLength="23.4" lengthAdjust="spacingAndGlyphs">840</text>
+<text x="92.2" y="1287" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1287" textLength="62.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/log</text>
+<text x="61.0" y="1306" textLength="23.4" lengthAdjust="spacingAndGlyphs">240</text>
+<text x="92.2" y="1306" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1306" textLength="78.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/var/cache</text>
+<text x="61.0" y="1325" textLength="23.4" lengthAdjust="spacingAndGlyphs">370</text>
+<text x="92.2" y="1325" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="123.4" y="1325" textLength="39.0" lengthAdjust="spacingAndGlyphs">/home</text>
+<text x="61.0" y="1344" textLength="23.4" lengthAdjust="spacingAndGlyphs">370</text>
+<text x="92.2" y="1344" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1344" textLength="85.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/home/alice</text>
+<text x="61.0" y="1363" textLength="23.4" lengthAdjust="spacingAndGlyphs">280</text>
+<text x="92.2" y="1363" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="123.4" y="1363" textLength="31.2" lengthAdjust="spacingAndGlyphs">/lib</text>
+<text x="61.0" y="1382" textLength="23.4" lengthAdjust="spacingAndGlyphs">280</text>
+<text x="92.2" y="1382" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1382" textLength="93.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/lib/modules</text>
+<text x="61.0" y="1401" textLength="23.4" lengthAdjust="spacingAndGlyphs">240</text>
+<text x="92.2" y="1401" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="123.4" y="1401" textLength="39.0" lengthAdjust="spacingAndGlyphs">/boot</text>
+<text x="61.0" y="1420" textLength="23.4" lengthAdjust="spacingAndGlyphs">200</text>
+<text x="92.2" y="1420" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="123.4" y="1420" textLength="31.2" lengthAdjust="spacingAndGlyphs">/tmp</text>
+<text x="61.0" y="1439" textLength="23.4" lengthAdjust="spacingAndGlyphs">200</text>
+<text x="92.2" y="1439" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1439" textLength="117.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/tmp/build-7731</text>
+<text x="61.0" y="1458" textLength="23.4" lengthAdjust="spacingAndGlyphs">100</text>
+<text x="92.2" y="1458" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="123.4" y="1458" textLength="39.0" lengthAdjust="spacingAndGlyphs">/root</text>
+<text x="61.0" y="1477" textLength="23.4" lengthAdjust="spacingAndGlyphs">100</text>
+<text x="92.2" y="1477" textLength="15.6" lengthAdjust="spacingAndGlyphs">MB</text>
+<text x="139.0" y="1477" textLength="78.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">/root/.npm</text>
+<text x="22.0" y="1515" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">whyfull</text>
+<text x="84.4" y="1515" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">0.1.0</text>
+<text x="131.2" y="1515" textLength="39.0" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">never</text>
+<text x="178.0" y="1515" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">deletes</text>
+<text x="240.4" y="1515" textLength="70.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">anything.</text>
+<text x="318.4" y="1515" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">Review</text>
+<text x="373.0" y="1515" textLength="31.2" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">each</text>
+<text x="412.0" y="1515" textLength="54.6" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">command</text>
+<text x="474.4" y="1515" textLength="46.8" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">before</text>
+<text x="529.0" y="1515" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">you</text>
+<text x="560.2" y="1515" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">run</text>
+<text x="591.4" y="1515" textLength="23.4" lengthAdjust="spacingAndGlyphs" fill-opacity="0.55">it.</text>
+</g>
+</svg>

@@ -1,0 +1,31 @@
+name: Bug report
+description: whyfull crashed, reported something wrong, or printed a fix that didn't work
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected, and what whyfull did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: "The output of `sudo whyfull -v --format markdown` (remove anything private)."
+      render: markdown
+  - type: input
+    id: version
+    attributes:
+      label: whyfull version
+      placeholder: "whyfull --version"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Distribution, Python version and filesystem
+      placeholder: "Debian 12, Python 3.11, ext4 (df -T)"
+    validations:
+      required: true

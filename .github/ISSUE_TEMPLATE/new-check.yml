@@ -1,0 +1,41 @@
+name: My disk filled up because of…
+description: Something filled a disk and whyfull didn't spot it (or should explain it better)
+labels: ["new check"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Every check in whyfull started as a story like this. You don't need to write any code: describing what happened is already a big help.
+  - type: textarea
+    id: what
+    attributes:
+      label: What was using the space?
+      description: The program or service, and roughly how much space.
+      placeholder: "Kubernetes pod logs under /var/log/pods had grown to 30 GB."
+    validations:
+      required: true
+  - type: textarea
+    id: where
+    attributes:
+      label: How can it be recognised?
+      description: Paths, file names, or a command that shows it.
+      placeholder: "/var/log/pods/<namespace>_<pod>_<uid>/<container>/*.log; `crictl ps` lists the running containers."
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: How did you get the space back?
+      description: The commands you ran, and anything that could go wrong with them.
+      render: shell
+  - type: input
+    id: distro
+    attributes:
+      label: Distribution and version
+      placeholder: "Ubuntu 24.04"
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Want to write the check?
+      options:
+        - label: I'd like to open a pull request for this (CONTRIBUTING.md shows how)

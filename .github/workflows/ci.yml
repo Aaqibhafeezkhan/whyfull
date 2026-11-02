@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip install ruff vermin
+      - run: ruff check src tests tools
+      - name: Still runs on Python 3.6
+        run: vermin --no-tips -t=3.6- --violations src
+
+  test:
+    name: test (Python ${{ matrix.python }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # Official images cover every version, including ones setup-python dropped.
+    container: python:${{ matrix.python }}-slim
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.6", "3.7", "3.8", "3.9", "3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pytest
+      - run: python -m pytest -q
+      - name: Runs on this system
+        run: PYTHONPATH=src python -m whyfull -t 0 --scan-time 10
+
+  end-to-end:
+    name: full disk end to end
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build the single-file app
+        run: |
+          python tools/build_pyz.py
+          python dist/whyfull.pyz --version
+      - name: Fill a real disk and analyse it
+        run: |
+          truncate -s 4G /tmp/demo.img && mkfs.ext4 -q -F /tmp/demo.img
+          sudo mkdir -p /mnt/demo && sudo mount -o loop /tmp/demo.img /mnt/demo
+          sudo python3 tools/demo.py /mnt/demo | tee report.txt
+          for want in "% full" "deleted file still open by nginx" "Docker log of container api" \
+                      "3 old kernels" "systemd journal" "apt package cache" "You can free about"; do
+            grep -q "$want" report.txt || { echo "missing from the report: $want"; exit 1; }
+          done
+      - name: Analyse this runner
+        run: |
+          sudo python3 dist/whyfull.pyz -t 0 --scan-time 20
+          sudo python3 dist/whyfull.pyz --json --no-scan | python3 -m json.tool > /dev/null
+          sudo python3 dist/whyfull.pyz --format markdown --no-scan > /dev/null

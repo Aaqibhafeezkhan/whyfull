@@ -1,0 +1,68 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "whyfull"
+dynamic = ["version"]
+description = "Find out why your Linux disk is full: deleted-but-open files, Docker, journald, old kernels, caches and more, each with the command that fixes it."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ahmed Laban" }]
+requires-python = ">=3.6"
+dependencies = []
+keywords = [
+    "disk full", "disk space", "no space left on device", "df", "du", "linux", "sysadmin",
+    "devops", "sre", "docker", "journald", "inodes", "deleted files", "lsof", "cleanup",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Filesystems",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/amlaban65/whyfull"
+Issues = "https://github.com/amlaban65/whyfull/issues"
+Changelog = "https://github.com/amlaban65/whyfull/blob/main/CHANGELOG.md"
+
+[project.scripts]
+whyfull = "whyfull.cli:main"
+
+[tool.hatch.version]
+path = "src/whyfull/__init__.py"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "tools", "README.md", "LICENSE", "CHANGELOG.md"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/whyfull"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py37"  # ruff's oldest target; vermin in CI checks 3.6
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "UP"]
+# Keep the code runnable on Python 3.6: no f-strings, no newer syntax.
+ignore = ["UP021", "UP022", "UP004", "UP008", "UP009", "UP010", "UP015", "UP025", "UP031", "UP032", "B904"]
