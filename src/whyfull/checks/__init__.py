@@ -21,6 +21,7 @@ MODULES = [
     "journald",
     "logs",
     "containers",
+    "cri",
     "packages",
     "kernels",
     "snaps",
