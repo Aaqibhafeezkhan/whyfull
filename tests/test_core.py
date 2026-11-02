@@ -112,7 +112,8 @@ def test_scan_excludes_paths_without_entering_them(tmp_path, monkeypatch):
 
     def scandir(path):
         visited.append(path)
-        assert not os.path.normpath(path).startswith(str(ignored))
+        assert os.path.normpath(path) != str(ignored)
+        assert not os.path.normpath(path).startswith(str(ignored) + os.sep)
         return real_scandir(path)
 
     monkeypatch.setattr(os, "scandir", scandir)
