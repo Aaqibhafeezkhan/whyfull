@@ -79,8 +79,15 @@ sudo whyfull /var                 # only the filesystem holding /var
 sudo whyfull -t 70                # lower the "full" threshold to 70%
 sudo whyfull -v                   # explain every finding, list all evidence
 sudo whyfull --no-scan            # skip the full scan, run only the checks
+sudo whyfull --exclude /var/lib/db --exclude /media  # skip known paths in the full scan
 sudo whyfull --only docker,logs   # run some checks; see --list-checks
 ```
+
+`--exclude PATH` is repeatable and only affects the full scan. Excluded files
+and directories are omitted from scan totals and largest-directory listings;
+targeted checks still inspect them. When exclusions are set, whyfull skips the
+unexplained-space finding and adds a report note, since comparing a partial
+scan with `df` would otherwise make excluded data look like missing space.
 
 If nothing is above the threshold, whyfull analyses `/` anyway and tells you the disks are fine.
 
