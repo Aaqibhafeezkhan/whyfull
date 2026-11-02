@@ -123,10 +123,17 @@ def fake_proc(root, holder_pid):
         f.write("22 1 7:0 / / rw,relatime - ext4 %s rw\n" % src)
     with open(os.path.join(proc, "sys", "kernel", "osrelease"), "w") as f:
         f.write("6.8.0-45-generic\n")
-    link = os.path.join(proc, str(holder_pid))
-    if os.path.lexists(link):
-        os.remove(link)
-    os.symlink("/proc/%d" % holder_pid, link)
+    # The holder's open files are real; its identity is staged so that it looks like
+    # nginx running as a systemd service, whatever cgroup the demo itself runs in.
+    entry = os.path.join(proc, str(holder_pid))
+    if os.path.lexists(entry):
+        subprocess.check_call(["rm", "-rf", entry])
+    os.makedirs(entry)
+    os.symlink("/proc/%d/fd" % holder_pid, os.path.join(entry, "fd"))
+    with open(os.path.join(entry, "comm"), "w") as f:
+        f.write("nginx\n")
+    with open(os.path.join(entry, "cgroup"), "w") as f:
+        f.write("0::/system.slice/nginx.service\n")
     return proc
 
 
