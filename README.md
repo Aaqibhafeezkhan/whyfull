@@ -48,6 +48,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `cri` | Unused containerd/CRI-O images reported by `crictl`; running and stopped container references are preserved. Shared layers can reduce the actual reclaimed space. |
 | `journald` | A systemd journal that has grown past a sensible size, with the commands to vacuum it and cap it. |
 | `logs` | Rotated and compressed logs in `/var/log`, and single log files over 1 GB. |
+| `pod-logs` | The largest kubelet pod log directories, with rotation settings and explicitly cautious truncation commands. |
 | `kernels` | Installed kernels other than the running one and the newest one, with the right removal command for apt, dnf or zypper. |
 | `packages` | apt, dnf, yum, pacman, zypper and apk caches. |
 | `snaps` | Disabled snap revisions that snapd keeps around. |
