@@ -56,6 +56,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `crashes` | Core dumps from systemd-coredump, apport and ABRT, and `/var/crash`. |
 | `tmp` | Files in `/tmp` and `/var/tmp` nobody has touched in a week. |
 | `user-caches` | pip, uv, poetry, npm, yarn, pnpm, Go, Cargo, Maven, Gradle, Hugging Face, PyTorch and conda caches, and the Trash, for every user. |
+| `jenkins` | Workspaces and the largest build histories, including jobs nested in Jenkins folders, with native retention and cleanup guidance. |
 | `android` | Per-user emulator data and SDK system images, with Android tooling commands for reviewing and removing selected items. |
 | `mysql` | MySQL and MariaDB binary logs in `/var/lib/mysql`, with the `PURGE BINARY LOGS` and `binlog_expire_logs_seconds` fixes. |
 | `inodes` | A filesystem that ran out of inodes (too many files) rather than bytes, and the directories with the most entries. |

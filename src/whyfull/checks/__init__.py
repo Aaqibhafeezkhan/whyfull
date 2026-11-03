@@ -32,6 +32,7 @@ MODULES = [
     "tmpfiles",
     "usercaches",
     "android",
+    "jenkins",
 ]
 
 
