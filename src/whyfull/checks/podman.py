@@ -57,8 +57,7 @@ def run(ctx):
     # CRI-O shares this store, but Podman cannot see kubelet container references.
     crio = ctx.system.has("crictl") or ctx.system.exists("/etc/crio")
     if not crio and ctx.system.exists(ROOT) and ctx.on_target(ROOT):
-        for finding in _reclaimable(ctx, ROOT, [], "rootful"):
-            yield finding
+        yield from _reclaimable(ctx, ROOT, [], "rootful")
     for name, home in ctx.system.users():
         path = os.path.join(home, ".local/share/containers/storage")
         if not ctx.system.exists(path) or not ctx.on_target(path):

@@ -97,5 +97,7 @@ def test_crio_store_does_not_suggest_podman_pruning(root, marker):
 
 def test_unsupported_build_cache_row_has_no_system_prune_suggestion(root):
     root.mkdir(podman.ROOT)
-    root.commands[("podman", "system", "df", "--format", "json")] = '[{"Type":"Build Cache","RawReclaimable":500000000}]'
+    root.commands[("podman", "system", "df", "--format", "json")] = json.dumps([
+        {"Type": "Build Cache", "RawReclaimable": 500000000},
+    ])
     assert list(podman.run(make_ctx(root.system()))) == []
