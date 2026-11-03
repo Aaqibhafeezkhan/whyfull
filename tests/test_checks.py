@@ -6,7 +6,7 @@ import sys
 from conftest import make_ctx
 
 from whyfull.checks import containers, crashes, deleted_open, journald, kernels, logs, packages, snaps
-from whyfull.checks import space, tmpfiles, usercaches
+from whyfull.checks import mysql, space, tmpfiles, usercaches
 from whyfull.model import CAUTION, INFO, REVIEW, SAFE, Filesystem
 from whyfull.system import System
 
@@ -209,3 +209,46 @@ def test_active_log_fix_preserves_the_full_path(root, monkeypatch):
     for f in found:
         assert shlex.split(f.fix[0]) == ["sudo", "truncate", "-s", "0", f.key]
         assert f.fix[0].endswith(shlex.quote(f.key))
+
+
+def test_mysql_binary_logs_only(root, monkeypatch):
+    monkeypatch.setattr(mysql, "MIN_BYTES", 20000)
+    paths = ["/var/lib/mysql/binlog.000001", "/var/lib/mysql/mysql-bin.000002"]
+    for path in paths:
+        root.write(path, size=16000)
+    for name in ["binlog.index", "binlog.1.bak", "binlog.000003x", "ibdata1", "relay.000001"]:
+        root.write("/var/lib/mysql/" + name, size=50000)
+    root.mkdir("/var/lib/mysql/binlog.000004")
+    os.symlink(root.local(paths[0]), root.local("/var/lib/mysql/binlog.000005"))
+    system = root.system()
+    f, = findings(mysql.run, make_ctx(system))
+    assert f.bytes == sum(system.lstat(path).st_blocks * 512 for path in paths)
+    assert f.evidence == paths
+    assert f.risk == REVIEW
+    assert f.dev == system.lstat(paths[0]).st_dev
+    assert 'PURGE BINARY LOGS' in f.fix[1]
+    assert all("rm " not in line for line in f.fix)
+
+
+def test_mysql_skips_missing_and_small_logs(root, monkeypatch):
+    monkeypatch.setattr(mysql, "MIN_BYTES", 20000)
+    assert findings(mysql.run, make_ctx(root.system())) == []
+    root.write("/var/lib/mysqld/mysql-bin.000001", size=1000)
+    assert findings(mysql.run, make_ctx(root.system())) == []
+
+
+def test_mysql_reports_alternate_data_directory(root, monkeypatch):
+    monkeypatch.setattr(mysql, "MIN_BYTES", 20000)
+    root.write("/var/lib/mysqld/mariadb-bin.000001", size=50000)
+    f, = findings(mysql.run, make_ctx(root.system()))
+    assert f.key == "/var/lib/mysqld"
+
+
+def test_mysql_respects_target_filesystem(root, monkeypatch):
+    monkeypatch.setattr(mysql, "MIN_BYTES", 20000)
+    root.write("/var/lib/mysql/binlog.000001", size=50000)
+    root.mounts.append(("/var/lib/mysql", "ext4", "/dev/sdb1"))
+    system = root.system()
+    assert findings(mysql.run, make_ctx(system)) == []
+    f, = findings(mysql.run, make_ctx(system, mountpoint="/var/lib/mysql"))
+    assert f.dev == system.lstat("/var/lib/mysql").st_dev
