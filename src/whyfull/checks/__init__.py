@@ -23,6 +23,7 @@ MODULES = [
     "podlogs",
     "containers",
     "cri",
+    "podman",
     "packages",
     "kernels",
     "snaps",
