@@ -31,6 +31,7 @@ MODULES = [
     "mysql",
     "tmpfiles",
     "usercaches",
+    "android",
 ]
 
 

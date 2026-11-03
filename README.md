@@ -56,6 +56,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `crashes` | Core dumps from systemd-coredump, apport and ABRT, and `/var/crash`. |
 | `tmp` | Files in `/tmp` and `/var/tmp` nobody has touched in a week. |
 | `user-caches` | pip, uv, poetry, npm, yarn, pnpm, Go, Cargo, Maven, Gradle, Hugging Face, PyTorch and conda caches, and the Trash, for every user. |
+| `android` | Per-user emulator data and SDK system images, with Android tooling commands for reviewing and removing selected items. |
 | `inodes` | A filesystem that ran out of inodes (too many files) rather than bytes, and the directories with the most entries. |
 | `reserved` | ext filesystems that look full only because of the 5% reserved for root. |
 
