@@ -1,5 +1,7 @@
 import json
 
+import pytest
+
 from conftest import make_ctx
 from whyfull.checks import podman
 from whyfull.model import INFO, REVIEW
@@ -20,16 +22,29 @@ def test_rootful_reclaimable_counts_and_safe_read_commands(root, monkeypatch):
     assert findings[1].fix == ["podman container prune -f"]
 
 
-def test_rootless_inventory_runs_as_owner(root, monkeypatch):
+def test_rootless_storage_is_info_without_running_as_owner(root, monkeypatch):
     monkeypatch.setattr(podman, "MIN_BYTES", 20000)
-    root.mkdir("/home/alice/.local/share/containers/storage")
+    root.write("/home/alice/.local/share/containers/storage/layer", size=50000)
     root.commands[("podman", "--version")] = "podman version fixture"
+    # This output must never be requested, even when whyfull is run as root.
     root.commands[("sudo", "-u", "alice", "-H", "podman", "system", "df", "--format", "json")] = json.dumps([
         {"Type": "Images", "RawReclaimable": 50000},
     ])
-    finding, = list(podman.run(make_ctx(root.system())))
-    assert finding.bytes == 50000
-    assert finding.fix == ["sudo -u alice -H podman image prune -a -f"]
+    system = root.system()
+    commands = []
+    runner = system._runner
+
+    def record(argv):
+        commands.append(list(argv))
+        return runner(argv)
+
+    system._runner = record
+    finding, = list(podman.run(make_ctx(system)))
+    assert finding.bytes >= 50000
+    assert finding.risk == INFO
+    assert finding.fix[-1] == "sudo -u alice -H podman system df"
+    assert not any(cmd[0] == "sudo" for cmd in commands)
+    assert not any(cmd[:3] == ["podman", "system", "df"] for cmd in commands)
 
 
 def test_unavailable_rootless_inventory_is_total_usage_not_reclaimable(root, monkeypatch):
@@ -56,4 +71,31 @@ def test_non_target_storage_and_small_inventories_are_not_reported(root):
     assert list(podman.run(make_ctx(root.system()))) == []
     root.commands[("podman", "system", "df", "--format", "json")] = '[{"Type":"Images","RawReclaimable":500000000}]'
     root.mounts.append((podman.ROOT, "ext4", "/dev/sdb1"))
+    assert list(podman.run(make_ctx(root.system()))) == []
+
+
+@pytest.mark.parametrize("marker", ["crictl", "config"])
+def test_crio_store_does_not_suggest_podman_pruning(root, marker):
+    root.mkdir(podman.ROOT)
+    root.commands[("podman", "system", "df", "--format", "json")] = '[{"Type":"Images","RawReclaimable":500000000}]'
+    if marker == "crictl":
+        root.commands[("crictl", "--version")] = "crictl fixture"
+    else:
+        root.mkdir("/etc/crio")
+    system = root.system()
+    commands = []
+    runner = system._runner
+
+    def record(argv):
+        commands.append(list(argv))
+        return runner(argv)
+
+    system._runner = record
+    assert list(podman.run(make_ctx(system))) == []
+    assert not any(cmd[:3] == ["podman", "system", "df"] for cmd in commands)
+
+
+def test_unsupported_build_cache_row_has_no_system_prune_suggestion(root):
+    root.mkdir(podman.ROOT)
+    root.commands[("podman", "system", "df", "--format", "json")] = '[{"Type":"Build Cache","RawReclaimable":500000000}]'
     assert list(podman.run(make_ctx(root.system()))) == []
