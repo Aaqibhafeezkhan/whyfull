@@ -27,6 +27,7 @@ MODULES = [
     "kernels",
     "snaps",
     "crashes",
+    "mysql",
     "tmpfiles",
     "usercaches",
 ]
