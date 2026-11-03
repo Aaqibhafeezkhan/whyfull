@@ -66,7 +66,7 @@ def run(ctx):
             nbytes, REVIEW, dev,
             detail="Old log archives left behind by logrotate. Keep any you need for audits first.",
             fix=["sudo find /var/log -xdev -type f -regextype posix-extended "
-                 "-regex '.*(\\.(gz|xz|bz2|zst|old)|\\.[0-9]+|-[0-9]{8})$' -delete"],
+                 "-regex '.*(\\.(gz|xz|bz2|zst|zip|old)|\\.[0-9]+|-[0-9]{8})$' -delete"],
             evidence=["%s  %s" % (human(s), p) for s, p in examples[:5]],
         )
 
