@@ -239,7 +239,7 @@ def main():
     gdir = os.path.join(HERE, "guides")
     order = ["free-up-disk-space-ubuntu-server", "df-full-du-does-not-add-up", "deleted-files-still-using-space", "docker-disk-space",
              "kubernetes-node-disk-full", "journalctl-disk-usage", "no-space-left-on-device-but-df-shows-free-space",
-             "var-log-full", "boot-full-remove-old-kernels"]
+             "var-log-full", "boot-full-remove-old-kernels", "mysql-binary-logs-filling-disk", "podman-disk-space"]
     found = {os.path.splitext(n)[0] for n in os.listdir(gdir) if n.endswith(".md")}
     slugs = [s for s in order if s in found] + sorted(found - set(order))
     guides = [read_guide(os.path.join(gdir, s + ".md")) for s in slugs]
