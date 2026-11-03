@@ -46,6 +46,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `deleted-open` | Files that were deleted while a process still had them open. This is the classic "df says full but du says otherwise". whyfull names the systemd service or Docker container holding them and shows how to release the space with or without a restart. |
 | `docker` | Build cache, unused images, stopped containers, dangling volumes, and container logs with no size limit. |
 | `cri` | Unused containerd/CRI-O images reported by `crictl`; running and stopped container references are preserved. Shared layers can reduce the actual reclaimed space. |
+| `podman` | Reclaimable Podman images and stopped containers, plus per-user rootless storage. Total usage is labeled informational when reclaimable inventory is unavailable. |
 | `journald` | A systemd journal that has grown past a sensible size, with the commands to vacuum it and cap it. |
 | `logs` | Rotated and compressed logs in `/var/log`, and single log files over 1 GB. |
 | `pod-logs` | The largest kubelet pod log directories, with rotation settings and explicitly cautious truncation commands. |
