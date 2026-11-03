@@ -146,6 +146,24 @@ def test_tmp_only_counts_old_files(root, monkeypatch):
     assert f.bytes < 50000
 
 
+def test_torch_cache_counts_only_hub(root, monkeypatch):
+    monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
+    root.write("/home/alice/.cache/torch/hub/checkpoints/model.pt", size=50000)
+    root.write("/home/alice/.cache/torch/extensions/build.so", size=100000)
+    ctx = make_ctx(root.system())
+    found = [f for f in usercaches.run(ctx) if f.key == "PyTorch hub cache"]
+    assert len(found) == 1
+    assert found[0].bytes == ctx.size("/home/alice/.cache/torch/hub")
+    assert found[0].fix == ["sudo -u alice -H sh -c 'rm -rf ~/.cache/torch/hub'"]
+
+
+def test_torch_cache_ignores_large_non_hub_cache(root, monkeypatch):
+    monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
+    root.write("/home/alice/.cache/torch/extensions/build.so", size=100000)
+    found = list(usercaches.run(make_ctx(root.system())))
+    assert not any(f.key == "PyTorch hub cache" for f in found)
+
+
 def test_user_caches_grouped_across_users(root, monkeypatch):
     monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
     root.write("/home/alice/.cache/pip/http/a", size=16000)
