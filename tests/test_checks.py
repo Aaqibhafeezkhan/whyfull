@@ -6,7 +6,7 @@ import sys
 from conftest import make_ctx
 
 from whyfull.checks import containers, crashes, deleted_open, journald, kernels, logs, packages, snaps
-from whyfull.checks import space, tmpfiles, usercaches
+from whyfull.checks import postgresql, space, tmpfiles, usercaches
 from whyfull.model import CAUTION, INFO, REVIEW, SAFE, Filesystem
 from whyfull.system import System
 
@@ -209,3 +209,39 @@ def test_active_log_fix_preserves_the_full_path(root, monkeypatch):
     for f in found:
         assert shlex.split(f.fix[0]) == ["sudo", "truncate", "-s", "0", f.key]
         assert f.fix[0].endswith(shlex.quote(f.key))
+
+
+def test_postgresql_finds_standard_cluster_layouts(root, monkeypatch):
+    monkeypatch.setattr(postgresql, "MIN_BYTES", 20000)
+    paths = ["/var/lib/postgresql/16/main/pg_wal", "/var/lib/pgsql/data/pg_wal",
+             "/var/lib/pgsql/9.6/data/pg_xlog"]
+    for path in paths:
+        root.write(path + "/000000010000000000000001", size=50000)
+    ctx = make_ctx(root.system())
+    found = findings(postgresql.run, ctx)
+    assert {f.key for f in found} == set(paths)
+    assert all(f.risk == INFO and f.bytes == ctx.size(f.key) for f in found)
+    assert all("Never delete WAL by hand" in f.detail for f in found)
+    assert all("pg_replication_slots" in f.fix[0] for f in found)
+    assert all("pg_stat_archiver" in f.fix[1] for f in found)
+
+
+def test_postgresql_skips_missing_small_and_symlinked_wal(root, monkeypatch):
+    monkeypatch.setattr(postgresql, "MIN_BYTES", 20000)
+    assert findings(postgresql.run, make_ctx(root.system())) == []
+    root.write("/var/lib/pgsql/data/pg_wal/segment", size=1000)
+    root.mkdir("/var/lib/postgresql/16/main")
+    root.write("/elsewhere/segment", size=50000)
+    os.symlink(root.local("/elsewhere"), root.local("/var/lib/postgresql/16/main/pg_wal"))
+    assert findings(postgresql.run, make_ctx(root.system())) == []
+
+
+def test_postgresql_respects_separate_wal_filesystem(root, monkeypatch):
+    monkeypatch.setattr(postgresql, "MIN_BYTES", 20000)
+    path = "/var/lib/postgresql/16/main/pg_wal"
+    root.write(path + "/segment", size=50000)
+    root.mounts.append((path, "ext4", "/dev/sdb1"))
+    system = root.system()
+    assert findings(postgresql.run, make_ctx(system)) == []
+    f, = findings(postgresql.run, make_ctx(system, mountpoint=path))
+    assert f.dev == system.lstat(path).st_dev

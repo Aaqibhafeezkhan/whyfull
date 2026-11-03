@@ -27,6 +27,7 @@ MODULES = [
     "kernels",
     "snaps",
     "crashes",
+    "postgresql",
     "tmpfiles",
     "usercaches",
 ]
