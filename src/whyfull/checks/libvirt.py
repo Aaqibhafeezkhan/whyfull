@@ -44,7 +44,7 @@ def _references(ctx):
         # Without a complete chain, don't suggest that unlisted files are unused.
         if not ctx.system.has("qemu-img"):
             return None
-        text = ctx.system.run(["qemu-img", "info", "--backing-chain", "--output=json", source])
+        text = ctx.system.run(["qemu-img", "info", "-U", "--backing-chain", "--output=json", source])
         try:
             chain = json.loads(text or "null")
             if not isinstance(chain, list) or not chain:
@@ -104,7 +104,7 @@ def run(ctx):
             "libvirt", path, "Libvirt disk image not referenced by a defined VM", size, CAUTION, info.st_dev,
             detail=("No defined VM or inspected backing chain references this file. "
                     "It may still belong to an external VM or backup; removing it destroys its contents."),
-            fix=["sudo virsh list --all", "sudo qemu-img info %s" % shlex.quote(path),
+            fix=["sudo virsh list --all", "sudo qemu-img info -U %s" % shlex.quote(path),
                  "# Verify ownership and backups before running the removal command.",
                  "sudo rm -- %s" % shlex.quote(path)],
             evidence=["%s  %s" % (human(size), path)],

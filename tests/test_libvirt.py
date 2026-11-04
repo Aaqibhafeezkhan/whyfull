@@ -19,7 +19,8 @@ def inventory(root):
     root.commands[("virsh", "list", "--all", "--name")] = "vm\n"
     root.commands[("virsh", "domblklist", "vm", "--details")] = (
         "Type Device Target Source\n-----------------------------\nfile disk vda %s\n" % used)
-    root.commands[("qemu-img", "info", "--backing-chain", "--output=json", used)] = json.dumps([
+    # Only shared, read-only inspection is available for a running VM's image.
+    root.commands[("qemu-img", "info", "-U", "--backing-chain", "--output=json", used)] = json.dumps([
         {"filename": used, "full-backing-filename": libvirt.ROOT + "/base.img"},
         {"filename": libvirt.ROOT + "/base.img"},
     ])
@@ -39,7 +40,7 @@ def test_used_disks_and_backing_images_are_preserved(root, monkeypatch):
 def test_incomplete_backing_chain_is_information_only(root, monkeypatch, broken):
     setup_images(root, monkeypatch)
     inventory(root)
-    root.commands[("qemu-img", "info", "--backing-chain", "--output=json", libvirt.ROOT + "/used.qcow2")] = broken
+    root.commands[("qemu-img", "info", "-U", "--backing-chain", "--output=json", libvirt.ROOT + "/used.qcow2")] = broken
     finding, = list(libvirt.run(make_ctx(root.system())))
     assert finding.risk == INFO
     assert not any("rm " in line for line in finding.fix)
