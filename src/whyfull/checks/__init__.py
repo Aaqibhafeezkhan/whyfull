@@ -29,6 +29,7 @@ MODULES = [
     "snaps",
     "crashes",
     "mysql",
+    "searchdata",
     "tmpfiles",
     "usercaches",
     "android",

@@ -58,6 +58,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `user-caches` | pip, uv, poetry, npm, yarn, pnpm, Go, Cargo, Maven, Gradle, Hugging Face, PyTorch and conda caches, and the Trash, for every user. |
 | `android` | Per-user emulator data and SDK system images, with Android tooling commands for reviewing and removing selected items. |
 | `mysql` | MySQL and MariaDB binary logs in `/var/lib/mysql`, with the `PURGE BINARY LOGS` and `binlog_expire_logs_seconds` fixes. |
+| `search-data` | Elasticsearch and OpenSearch data sizes, default flood-stage guidance, and API/ILM/ISM investigation. Informational only; no cluster requests or data deletion. |
 | `inodes` | A filesystem that ran out of inodes (too many files) rather than bytes, and the directories with the most entries. |
 | `reserved` | ext filesystems that look full only because of the 5% reserved for root. |
 
