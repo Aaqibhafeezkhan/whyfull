@@ -3,6 +3,8 @@ import shlex
 import subprocess
 import sys
 
+import pytest
+
 from conftest import make_ctx
 
 from whyfull.checks import containers, crashes, deleted_open, journald, kernels, logs, packages, snaps
@@ -13,6 +15,38 @@ from whyfull.system import System
 
 def findings(fn, ctx):
     return list(fn(ctx) or [])
+
+
+def _proc_pid_namespace_aligned():
+    """True when /proc PIDs match this process's PID namespace."""
+    try:
+        return os.readlink("/proc/self") == str(os.getpid())
+    except OSError:
+        return False
+
+
+def _proc_pids_holding_deleted(path):
+    """PIDs under /proc that still hold a deleted open of `path`."""
+    needle = path + " (deleted)"
+    held = []
+    try:
+        pids = [p for p in os.listdir("/proc") if p.isdigit()]
+    except OSError:
+        return held
+    for pid in pids:
+        fd_dir = os.path.join("/proc", pid, "fd")
+        try:
+            fds = os.listdir(fd_dir)
+        except OSError:
+            continue
+        for fd in fds:
+            try:
+                if os.readlink(os.path.join(fd_dir, fd)) == needle:
+                    held.append(pid)
+                    break
+            except OSError:
+                continue
+    return held
 
 
 def test_deleted_open_file_held_by_a_real_process(tmp_path):
@@ -26,6 +60,16 @@ def test_deleted_open_file_held_by_a_real_process(tmp_path):
         str(path)], stdout=subprocess.PIPE)
     try:
         assert holder.stdout.readline().strip() == b"ready"
+        # In some containers/sandboxes /proc is another PID namespace, so
+        # subprocess.Popen's PID is not the one listed under /proc.
+        proc_pids = _proc_pids_holding_deleted(str(path))
+        if not proc_pids:
+            if not _proc_pid_namespace_aligned():
+                pytest.skip(
+                    "helper not visible in /proc (PID namespace mismatch); "
+                    "os.readlink('/proc/self') != str(os.getpid())"
+                )
+            pytest.fail("helper process has no deleted-open fd under /proc")
         system = System()
         dev = os.stat(str(tmp_path)).st_dev
         fs = Filesystem("/", "/dev/x", "ext4", dev, 100, 90, 10)
@@ -37,7 +81,14 @@ def test_deleted_open_file_held_by_a_real_process(tmp_path):
         f = found[0]
         assert f.risk == CAUTION
         assert f.bytes >= 3 * 1024 * 1024
-        assert any("/proc/%d/fd/" % holder.pid in c for c in f.fix)
+        # Assert against the /proc PID that holds the file, not subprocess's
+        # host-namespace PID — those differ when /proc is namespaced. Other
+        # same-comm processes may share the finding's truncate list; only
+        # require our holder to appear.
+        assert any(
+            any("/proc/%s/fd/" % pid in c for pid in proc_pids)
+            for c in f.fix
+        )
         assert ctx.deleted_open_bytes[dev] >= 3 * 1024 * 1024
     finally:
         holder.kill()
