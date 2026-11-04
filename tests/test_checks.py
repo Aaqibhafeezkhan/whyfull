@@ -197,7 +197,7 @@ def test_developer_caches_include_correct_cleanup_commands(root, monkeypatch):
 
 def test_developer_caches_are_grouped_across_users(root, monkeypatch):
     monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
-    root.write("/home/alice/.cache/sccache/artifact", size=12000)
+    root.write("/home/alice/.cache/sccache/artifact", size=16000)
     root.write("/root/.cache/sccache/artifact", size=12000)
     found = [f for f in findings(usercaches.run, make_ctx(root.system()))
              if f.key == "sccache cache"]
