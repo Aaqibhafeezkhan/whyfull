@@ -1,3 +1,4 @@
+import os
 import stat
 
 import pytest
@@ -88,6 +89,7 @@ def test_search_data_skips_symlink_roots(root, monkeypatch):
     assert search_findings(ctx) == []
 
 
+@pytest.mark.skipif(os.name == "nt", reason="Allocated-block traversal is Linux-only, like whyfull itself")
 def test_search_data_measures_the_fake_store(root, monkeypatch):
     from whyfull.checks import searchdata
 
