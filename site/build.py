@@ -237,7 +237,7 @@ def main():
     if os.path.exists(OUT):
         shutil.rmtree(OUT)
     gdir = os.path.join(HERE, "guides")
-    order = ["free-up-disk-space-ubuntu-server", "df-full-du-does-not-add-up", "deleted-files-still-using-space", "docker-disk-space",
+    order = ["free-up-disk-space-ubuntu-server", "find-large-files-and-directories-linux", "df-full-du-does-not-add-up", "deleted-files-still-using-space", "docker-disk-space",
              "kubernetes-node-disk-full", "journalctl-disk-usage", "no-space-left-on-device-but-df-shows-free-space",
              "var-log-full", "boot-full-remove-old-kernels", "mysql-binary-logs-filling-disk", "podman-disk-space"]
     found = {os.path.splitext(n)[0] for n in os.listdir(gdir) if n.endswith(".md")}

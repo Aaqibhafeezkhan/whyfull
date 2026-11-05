@@ -84,8 +84,8 @@ sudo ncdu -x /
 
 - `-x` again keeps it on one filesystem.
 - Press `d` on a selected file or directory to delete it, but only
-  after you have confirmed what it is: `ncdu` deletes immediately and
-  does not move things to a trash folder.
+  after you have confirmed what it is. `ncdu` asks for confirmation,
+  but the deletion is permanent: nothing goes to a trash folder.
 - If `ncdu` is not installed, install it from your distribution
   (`sudo apt install ncdu` on Ubuntu/Debian, `sudo dnf install ncdu`
   on Fedora) or use the `du` commands above instead.

@@ -60,6 +60,7 @@ Run it with `sudo`. Without root it can't measure files owned by other users and
 | `libvirt` | Disk images not referenced by defined VMs or inspected backing chains. Incomplete inventories produce informational findings, never removal recommendations. |
 | `android` | Per-user emulator data and SDK system images, with Android tooling commands for reviewing and removing selected items. |
 | `mysql` | MySQL and MariaDB binary logs in `/var/lib/mysql`, with the `PURGE BINARY LOGS` and `binlog_expire_logs_seconds` fixes. |
+| `postgresql` | PostgreSQL write-ahead logs (`pg_wal`) piling up, with read-only queries to find an inactive replication slot or failing archiver. Informational: WAL is never safe to delete by hand. |
 | `search-data` | Elasticsearch and OpenSearch data sizes, default flood-stage guidance, and API/ILM/ISM investigation. Informational only; no cluster requests or data deletion. |
 | `inodes` | A filesystem that ran out of inodes (too many files) rather than bytes, and the directories with the most entries. |
 | `reserved` | ext filesystems that look full only because of the 5% reserved for root. |
