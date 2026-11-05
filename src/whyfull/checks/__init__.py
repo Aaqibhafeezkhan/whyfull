@@ -30,6 +30,7 @@ MODULES = [
     "crashes",
     "mysql",
     "searchdata",
+    "postgresql",
     "tmpfiles",
     "usercaches",
     "android",
