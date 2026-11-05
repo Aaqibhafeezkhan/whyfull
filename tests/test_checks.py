@@ -225,6 +225,40 @@ def test_user_caches_grouped_across_users(root, monkeypatch):
     assert found[0].fix == ["sudo -u alice -H sh -c 'pip cache purge'", "pip cache purge"]
 
 
+def test_developer_caches_include_correct_cleanup_commands(root, monkeypatch):
+    monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
+    cases = [
+        (".cache/ccache", "ccache cache", 'CCACHE_DIR="$HOME/.cache/ccache" ccache -C', SAFE),
+        (".ccache", "ccache legacy cache", 'CCACHE_DIR="$HOME/.ccache" ccache -C', SAFE),
+        (".cache/sccache", "sccache cache", "rm -rf ~/.cache/sccache", SAFE),
+        (".cache/ms-playwright", "Playwright browsers", "npx playwright uninstall --all", SAFE),
+        (".cache/puppeteer", "Puppeteer browsers", "rm -rf ~/.cache/puppeteer", SAFE),
+        (".cache/JetBrains", "JetBrains IDE caches",
+         "du -sh ~/.cache/JetBrains/*  # remove only unused IDE versions", REVIEW),
+    ]
+    for path, _name, _cmd, _risk in cases:
+        root.write("/home/alice/" + path + "/artifact", size=30000)
+
+    found = {f.key: f for f in findings(usercaches.run, make_ctx(root.system()))}
+    for _path, name, command, risk in cases:
+        assert found[name].risk == risk
+        assert found[name].fix == ["sudo -u alice -H sh -c '%s'" % command]
+        assert found[name].bytes >= 30000
+
+
+def test_developer_caches_are_grouped_across_users(root, monkeypatch):
+    monkeypatch.setattr(usercaches, "MIN_BYTES", 20000)
+    root.write("/home/alice/.cache/sccache/artifact", size=16000)
+    root.write("/root/.cache/sccache/artifact", size=12000)
+    found = [f for f in findings(usercaches.run, make_ctx(root.system()))
+             if f.key == "sccache cache"]
+    assert len(found) == 1
+    assert found[0].fix == [
+        "sudo -u alice -H sh -c 'rm -rf ~/.cache/sccache'",
+        "rm -rf ~/.cache/sccache",
+    ]
+
+
 def test_docker_system_df_and_container_logs(root, monkeypatch):
     monkeypatch.setattr(containers, "MIN_RECLAIM", 1000)
     monkeypatch.setattr(containers, "BIG_LOG", 1000)
